@@ -9,6 +9,14 @@
   </head>
 
   <body>
+    <header>  
+        <% if logged_in? %>
+            <%= current_user[:username] %>
+        <label>logout</label>
+        <% else %>
+        <label >login</label>
+        <% end %>
+    </header>
     <%= yield %>
   </body>
 </html>
